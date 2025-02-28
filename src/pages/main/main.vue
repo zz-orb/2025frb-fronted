@@ -52,12 +52,9 @@ export default {
            })
        },
       // 处理点击发帖子按钮打开弹窗的逻辑
-     
   }
 };
 </script>
-
-
 
 <style scoped>
 .container {
