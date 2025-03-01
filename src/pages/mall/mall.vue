@@ -1,7 +1,6 @@
 <template>
   <div class="top">
     <div class="header"></div>
-    <h1 class="page-title">科普文章</h1>
 
     <div class="post-container">
       <div v-if="loading" class="loading">加载中...</div>
