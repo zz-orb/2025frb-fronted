@@ -4,14 +4,25 @@
             <div class="modal-content">
                 <h2>发布帖子</h2>
                 <!-- 输入文字的文本框 -->
-                <textarea v-model="postTitles" placeholder="请输入帖子标题"></textarea>
-                <!-- 输入文字的文本框 -->
-                <textarea v-model="postContent" placeholder="请输入帖子内容"></textarea>
+              <a-textarea
+                  v-model="postTitles"
+                  placeholder="请输入帖子标题"
+              ></a-textarea>
+              <a-textarea
+                  v-model="postContent"
+                  placeholder="请输入帖子内容"
+              ></a-textarea>
+
                 <div class="modal-buttons">
-                    <!-- 确认按钮，点击时调用confirmPost方法并隐藏弹窗 -->
-                    <button @click="confirmPost">确认</button>
-                    <!-- 取消按钮，点击时隐藏弹窗 -->
-                    <button @click="cancelPost">取消</button>
+
+                  <a-button
+                      type="primary"
+                      @click="confirmPost"
+                  >确认</a-button>
+                  <a-button
+                      type="primary"
+                      @click="cancelPost"
+                  >取消</a-button>
                 </div>
             </div>
         </div>

@@ -1,17 +1,15 @@
 <template>  
     <div class="top">  
     <div class="header">
-    </div> 
-      <h1 class="page-title">讨论区</h1>  
-      <div>
-      <!-- 发帖子按钮 -->
-          <button @click="openPostModal">发帖子</button>
-      </div>
+    </div>
       <div class="post-list-container">  
         <post/> <!-- 使用post.vue组件 -->  
       </div> 
       <postmodel :visible="postModalVisible" @update:visible="postModalVisible = $event"></postmodel>
-    </div>  
+      <button class="post-button" @click="openPostModal">
+        <i class="fas fa-plus text-xl"></i>
+      </button>
+    </div>
   </template>  
     
   <script>  
@@ -60,5 +58,26 @@ import Post from '../../components/post/post.vue'; // 假设post.vue在同一目
   }  
     
   /* 这里的样式将应用于post.vue组件内部的元素，但您需要在post.vue中定义它们 */  
-  /* 例如，您可以在post.vue的<style>部分中添加.post-card的样式 */  
+  /* 例如，您可以在post.vue的<style>部分中添加.post-card的样式 */
+
+  .post-button {
+    position: fixed;
+    bottom: 150px;
+    right: 150px;
+    background-color: #39c5bb; /* 青色 */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .post-button:hover {
+    background-color: #008c6a; /* 鼠标悬停时的颜色 */
+  }
   </style>

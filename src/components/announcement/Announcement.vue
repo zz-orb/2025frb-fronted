@@ -14,7 +14,10 @@
             </div>
             <!-- 已读按钮 -->
             <div class="read-btn">
-                <button @click="markAsRead(announcement)" :disabled="announcement.read">{{ announcement.read? '已读' : '标记已读' }}</button>
+                <a-button type="primary"
+                          @click="markAsRead(announcement)"
+                        :disabled="announcement.read">{{ announcement.read? '已读' : '标记已读' }}
+                </a-button>
             </div>
         </div>
         <div v-if="loading">加载中...</div>

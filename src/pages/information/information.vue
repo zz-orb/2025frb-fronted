@@ -10,13 +10,13 @@
       <div class="login">
         <a-form @submit="onSubmit" :form="form">
           <a-tabs size="large" :tabBarStyle="{textAlign: 'center'}" style="padding: 0 2px;">
-            <a-tab-pane tab="请输入新用户名和密码" key="1">
+            <a-tab-pane tab="重置用户信息" key="1">
               <a-alert type="error" :closable="true" v-if="error" :message="error" @close='onClose' showIcon style="margin-bottom: 24px;" />
               <a-form-item>
                 <a-input
                   autocomplete="autocomplete"
                   size="large"
-                  placeholder="请输入用户名^^"
+                  placeholder="请输入新用户名^^"
                   v-decorator="['name', {rules: [{ required: true, message: '您还未输入账户名', whitespace: true}]}]"
                 >
                   <a-icon slot="prefix" type="user" />
@@ -25,7 +25,7 @@
               <a-form-item>
                 <a-input
                   size="large"
-                  placeholder="请输入密码^^"
+                  placeholder="请输入新密码^^"
                   autocomplete="autocomplete"
                   type="password"
                   v-decorator="['password', {rules: [{ required: true, message: '您还未输入密码', whitespace: true}]}]"

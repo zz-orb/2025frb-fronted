@@ -41,23 +41,15 @@ const options = {
           path: 'main',
           name: '主页面',
           meta: {
-            icon: 'file-ppt'
+            icon: 'home'
           },
           component: () => import('@/pages/main')
-        },
-        {
-          path: '/login',
-          name: '退出登录',
-          meta: {
-            icon: 'file-ppt'
-          },
-          component: () => import('@/pages/login')
         },
         {
           path: '/mall',
           name: '政策解读',
           meta: {
-            icon: 'file-ppt'
+            icon: 'bulb'
           },
           component: () => import('@/pages/mall')
         },
@@ -65,7 +57,7 @@ const options = {
           path: '/shopcart',
           name: '讨论区',
           meta: {
-            icon: 'file-ppt'
+            icon: 'message'
           },
           component: () => import('@/pages/shopcart')
         },
@@ -73,7 +65,7 @@ const options = {
           path: '/collect',
           name: '我的收藏',
           meta: {
-            icon: 'file-ppt'
+            icon: 'star'
           },
           component: () => import('@/pages/collect')
         },

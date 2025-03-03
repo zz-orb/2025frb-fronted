@@ -3,44 +3,67 @@
     <div class="top">
       <div class="header">
         <img alt="logo" class="logo" src="@/assets/img/logo.png" />
-        <span class="title">{{systemName}}</span>
+        <span class="title">{{ systemName }}</span>
       </div>
       <div class="desc"></div>
     </div>
     <div class="login">
       <a-form @submit="onSubmit" :form="form">
-        <a-tabs size="large" :tabBarStyle="{textAlign: 'center'}" style="padding: 0 2px;">
+        <a-tabs size="large" :tabBarStyle="{ textAlign: 'center' }" style="padding: 0 2px;">
           <a-tab-pane tab="账户密码登录" key="1">
-            <a-alert type="error" :closable="true" v-if="error" :message="error" @close='onClose' showIcon style="margin-bottom: 24px;" />
+            <a-alert
+                type="error"
+                :closable="true"
+                v-if="error"
+                :message="error"
+                @close="onClose"
+                showIcon
+                style="margin-bottom: 24px;"
+            />
             <a-form-item>
               <a-input
-                autocomplete="autocomplete"
-                size="large"
-                placeholder="请输入用户名^^"
-                v-decorator="['username', {rules: [{ required: true, message: '您还未输入账户名', whitespace: true}]}]"
+                  autocomplete="autocomplete"
+                  size="large"
+                  placeholder="请输入用户名^^"
+                  v-decorator="[
+                  'username',
+                  { rules: [{ required: true, message: '您还未输入账户名', whitespace: true }] },
+                ]"
               >
                 <a-icon slot="prefix" type="user" />
               </a-input>
             </a-form-item>
             <a-form-item>
               <a-input
-                size="large"
-                placeholder="请输入密码^^"
-                autocomplete="autocomplete"
-                type="password"
-                v-decorator="['password', {rules: [{ required: true, message: '您还未输入密码', whitespace: true}]}]"
+                  size="large"
+                  placeholder="请输入密码^^"
+                  autocomplete="autocomplete"
+                  type="password"
+                  v-decorator="[
+                  'password',
+                  { rules: [{ required: true, message: '您还未输入密码', whitespace: true }] },
+                ]"
               >
                 <a-icon slot="prefix" type="lock" />
               </a-input>
             </a-form-item>
           </a-tab-pane>
         </a-tabs>
-        <a-form-item>
-          <a-button :loading="logging" style="width: 100%;margin-top: 24px" size="large" htmlType="submit" type="primary">登录</a-button>
-        </a-form-item>
-        <div>
-          <router-link style="float: right" to="/Register">注册账户</router-link>
+        <!-- 将注册账户链接放在登录按钮上方 -->
+        <div style="text-align: right; margin-bottom: 16px;">
+          <router-link to="/Register" >注册账户</router-link>
         </div>
+        <a-form-item>
+          <a-button
+              :loading="logging"
+              style="width: 100%; margin-top: 0;"
+              size="large"
+              htmlType="submit"
+              type="primary"
+          >
+            登录
+          </a-button>
+        </a-form-item>
       </a-form>
     </div>
   </common-layout>

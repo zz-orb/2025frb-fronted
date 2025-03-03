@@ -35,7 +35,7 @@
             </a-form-item>
             <!-- 添加管理员注册勾选框 -->
             <a-form-item>
-              <a-checkbox v-model="isAdminRegister" @change="handleAdminRegisterChange">管理员注册</a-checkbox>
+              <a-checkbox v-model="isAdminRegister" @change="handleAdminRegisterChange" style = "color: white">管理员注册</a-checkbox>
             </a-form-item>
             <!-- 添加管理员验证码输入框，默认隐藏 -->
             <a-form-item v-show="isAdminRegister">

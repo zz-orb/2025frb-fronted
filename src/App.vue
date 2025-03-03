@@ -3,7 +3,7 @@
     <router-view/>
   </a-config-provider>
 </template>
-
+sudo
 <script>
 import {enquireScreen} from './utils/util'
 import {mapState, mapMutations} from 'vuex'

@@ -14,6 +14,7 @@
 
         <!-- 翻页按钮 -->
         <div class="pagination">
+
           <button
               @click="prevPage"
               :disabled="currentIndex === 0"
@@ -139,7 +140,7 @@ export default {
 }
 
 .pagination-button {
-  background: #007bff;
+  background: #39c5bb;
   color: white;
   border: none;
   padding: 10px 20px;
